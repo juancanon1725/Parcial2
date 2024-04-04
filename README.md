@@ -4,6 +4,6 @@
 
 1. Implementación del servicio Busqueda Lineal.
 
-linealSearch [LinealSearch.png]
+linealSearch [LinealSearch.png]!
 
    
