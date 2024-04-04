@@ -2,6 +2,8 @@
 
 ## Juan Pablo Poveda Cañon
 
-1. Implementación del servicio Busqueda Lineal
+1. Implementación del servicio Busqueda Lineal.
+
+linealSearch [LinealSearch.png]
 
    
