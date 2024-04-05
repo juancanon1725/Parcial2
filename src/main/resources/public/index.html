@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-            <title>Form Example</title>
-            <meta charset=\"UTF-8\">
-            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-        </head>
-    <body>
-        <h1>Form with GET</h1>
-        <form action=\"/hello\">
-               <label for=\"name\">Name:</label><br>
-               <input type=\"text\" id=\"name\" name=\"name\" value=\"\"><br><br>
-                <input type=\"button\" value=\"Submit\" onclick=\"loadGetMsg()\">
-        </form>
-        <div id=\"getrespmsg\"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Service</title>
+</head>
+<body>
+<div class="container">
+    <h1>Search Sevice</h1>
+    <div>
 
-        <script>
-                            function loadGetMsg() {
-                               let nameVar = document.getElementById(\"name\").value;
-                               const xhttp = new XMLHttpRequest();
-                               xhttp.onload = function() {
-                                   document.getElementById(\"getrespmsg\").innerHTML =
-                                   this.responseText;
-                                }
-                               xhttp.open(\"GET\", \"/linear?name=\"+nameVar);
-                               xhttp.send();
-                           }
-        </script>
-    </body>
+        <h2>Search Lineal</h2>
+        <form id="linearSearchForm" onsubmit="performLinearSearch(event)">
+            <label for="linearSearchInput">Lista (separada por comas):</label><br>
+            <input type="text" id="linearSearchInput" name="linearSearchInput" required><br>
+            <label for="linearSearchValue">Valor a buscar:</label><br>
+            <input type="text" id="linearSearchValue" name="linearSearchValue" required><br><br>
+            <button type="submit">Search Lineal</button>
+        </form>
+    </div>
+    <div>
+        <h2>Search Binary</h2>
+        <form id="binarySearchForm" onsubmit="performBinarySearch(event)">
+            <label for="binarySearchInput">Lista (separada por comas):</label><br>
+            <input type="text" id="binarySearchInput" name="binarySearchInput" required><br>
+            <label for="binarySearchValue">Valor a buscar:</label><br>
+            <input type="text" id="binarySearchValue" name="binarySearchValue" required><br><br>
+            <button type="submit">Search Binary</button>
+        </form>
+    </div>
+</div>
+<script src="message.js"></script>
+</body>
 </html>
 
