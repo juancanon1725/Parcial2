@@ -3,7 +3,7 @@ package org.example;
 import static spark.Spark.*;
 public class ProxyService {
 
-    private static final String[] SERVERS = new String[] { "http://23.20.193.166:4567/", "http://54.234.199.171:4567/" };
+    private static final String[] SERVERS = new String[] { "http://184.73.51.14:4567/", "http://34.229.212.102:4567/" };
     private static final int SERVER_COUNT = SERVERS.length;
     private static int serverIndex = 0;
 

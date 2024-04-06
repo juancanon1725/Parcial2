@@ -8,10 +8,10 @@
 <body>
 <h1>Search Services</h1>
 <form action="/linealSearch">
-    <h3>Linear Search</h3>
-    <label for="linear-list">Lista de Elementos:</label><br>
-    <input type="text" id="linear-list" name="name" value=""><br><br>
-    <label for="linear-value">Value:</label><br>
+    <h3>LineaL Search</h3>
+    <label for="linear-list">Lista de Elementos (separados por comas):</label><br>
+    <input type="text" id="linear-list" name="name" value=""><br>
+    <label for="linear-value">Valor a buscar:</label><br>
     <input type="text" id="linear-value" name="name" value=""><br><br>
     <input type="button" value="Submit" onclick="loadGetLinear()">
 </form>
@@ -19,9 +19,9 @@
 
 <form action="/binarySearch">
     <h3>Binary Search</h3>
-    <label for="binary-list">Lista de Elementos:</label><br>
-    <input type="text" id="binary-list" name="name" value=""><br><br>
-    <label for="binary-list">Elemento que desea buscar:</label><br>
+    <label for="binary-list">Lista de Elementos (separados por comas):</label><br>
+    <input type="text" id="binary-list" name="name" value=""><br>
+    <label for="binary-list">Valor a buscar:</label><br>
     <input type="text" id="binary-value" name="name" value=""><br><br>
     <input type="button" value="Submit" onclick="loadGetBinary()">
 </form>
