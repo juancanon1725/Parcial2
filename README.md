@@ -32,6 +32,9 @@ Consiste una aplicación desarrollada en Java que ofrece servicios para llevar a
   
 ![image](https://github.com/juancanon1725/Parcial2/assets/98672541/51a6712f-e0e2-4b61-91a8-8077ff4dcda1)
 
+Video Explicativo:
+
+[Ejecución en AWS](https://youtu.be/QqCFb6AGtak)
 
 
 ## Arquitectura
