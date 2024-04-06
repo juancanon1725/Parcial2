@@ -14,21 +14,21 @@ public class MathServices {
         port(getPort());
         get("/linealSearch", (req, res) -> {
             String lineal = req.queryParams("list");
-            List<Integer> linealList = transformList(lineal);
+            List<Integer> linealList = alternateList(lineal);
             int val = Integer.parseInt(req.queryParams("value"));
             int spot = linealSearch(linealList, val);
             return jsonForm("Lineal Search", linealList, val, spot);
         });
         get("/binarySearch", (req, res) -> {
             String line = req.queryParams("list");
-            List<Integer> lineList = transformList(line);
+            List<Integer> lineList = alternateList(line);
             int val = Integer.parseInt(req.queryParams("value"));
             int spot = binarySearch(lineList, val);
             return jsonForm("Binary Search", lineList, val, spot);
         });
     }
 
-    public static List<Integer> transformList(String lineal) {
+    public static List<Integer> alternateList(String lineal) {
         List<Integer> linealList = new ArrayList<>();
         String[] values = lineal.split(",");
             for (String value : values) {

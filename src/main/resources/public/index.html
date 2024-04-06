@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <title>Form Example</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Service</title>
 </head>
 <body>
-<div class="container">
-    <h1>Search Sevice</h1>
-    <div>
+<h1>Search Services</h1>
+<form action="/linealSearch">
+    <h3>Linear Search</h3>
+    <label for="linear-list">Lista de Elementos:</label><br>
+    <input type="text" id="linear-list" name="name" value=""><br><br>
+    <label for="linear-value">Value:</label><br>
+    <input type="text" id="linear-value" name="name" value=""><br><br>
+    <input type="button" value="Submit" onclick="loadGetLinear()">
+</form>
+<div id="getresplinear"></div>
 
-        <h2>Search Lineal</h2>
-        <form id="linearSearchForm" onsubmit="performLinearSearch(event)">
-            <label for="linearSearchInput">Lista (separada por comas):</label><br>
-            <input type="text" id="linearSearchInput" name="linearSearchInput" required><br>
-            <label for="linearSearchValue">Valor a buscar:</label><br>
-            <input type="text" id="linearSearchValue" name="linearSearchValue" required><br><br>
-            <button type="submit">Search Lineal</button>
-        </form>
-    </div>
-    <div>
-        <h2>Search Binary</h2>
-        <form id="binarySearchForm" onsubmit="performBinarySearch(event)">
-            <label for="binarySearchInput">Lista (separada por comas):</label><br>
-            <input type="text" id="binarySearchInput" name="binarySearchInput" required><br>
-            <label for="binarySearchValue">Valor a buscar:</label><br>
-            <input type="text" id="binarySearchValue" name="binarySearchValue" required><br><br>
-            <button type="submit">Search Binary</button>
-        </form>
-    </div>
-</div>
-<script src="message.js"></script>
+<form action="/binarySearch">
+    <h3>Binary Search</h3>
+    <label for="binary-list">Lista de Elementos:</label><br>
+    <input type="text" id="binary-list" name="name" value=""><br><br>
+    <label for="binary-list">Elemento que desea buscar:</label><br>
+    <input type="text" id="binary-value" name="name" value=""><br><br>
+    <input type="button" value="Submit" onclick="loadGetBinary()">
+</form>
+<div id="getrespbinary"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
-

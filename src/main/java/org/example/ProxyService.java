@@ -3,7 +3,7 @@ package org.example;
 import static spark.Spark.*;
 public class ProxyService {
 
-    private static final String[] SERVERS = { "http://23.20.193.166:4567/", "http://54.234.199.171:4567/" };
+    private static final String[] SERVERS = new String[] { "http://23.20.193.166:4567/", "http://54.234.199.171:4567/" };
     private static final int SERVER_COUNT = SERVERS.length;
     private static int serverIndex = 0;
 
@@ -11,10 +11,10 @@ public class ProxyService {
         port(getPort());
         staticFiles.location("/public");
 
-        get("linealSearch", (req, res) -> {
+        get("/linealSearch", (req, res) -> {
             try {
                 String serverUrl = getNextServerUrl();
-                String url = serverUrl + "linealSearch?list=" + req.queryParams("list") + "&value=" + req.queryParams("value");
+                String url = serverUrl + "/linealSearch?list=" + req.queryParams("list") + "&value=" + req.queryParams("value");
                 HttpConnectionExample.setURL(url);
                 return HttpConnectionExample.getResponse();
             } catch (Exception e) {
@@ -22,10 +22,10 @@ public class ProxyService {
             }
         });
 
-        get("binarySearch", (req, res) -> {
+        get("/binarySearch", (req, res) -> {
             try {
                 String serverUrl = getNextServerUrl();
-                String url = serverUrl + "binarySearch?list=" + req.queryParams("list") + "&value=" + req.queryParams("value");
+                String url = serverUrl + "/binarySearch?list=" + req.queryParams("list") + "&value=" + req.queryParams("value");
                 HttpConnectionExample.setURL(url);
                 return HttpConnectionExample.getResponse();
             } catch (Exception e) {
