@@ -19,6 +19,7 @@ Consiste una aplicación desarrollada en Java que ofrece servicios para llevar a
 ## Ejecucion en AWS
 
 - Se crean las instancias para cada servicio.
+- 
 ![AWSinstancias](https://github.com/juancanon1725/Parcial2/assets/98672541/3c61a4ec-4573-406f-bc8c-fe411c559dd2)
 
 - Se corre cada servicio con:
@@ -38,4 +39,5 @@ Consiste una aplicación desarrollada en Java que ofrece servicios para llevar a
 En la arquitectura encontramos servicios como:
 - MathServices que permite buscar en una lista de dos distintas maneras (lineal y binaria).
 - ProxyService se convierte en un servicio que permite conectar todas las clases.
+  
 ![img](https://github.com/juancanon1725/Parcial2/assets/98672541/804eb05b-8f48-4219-9ec9-1747e191d0c7)
