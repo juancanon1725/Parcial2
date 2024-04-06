@@ -19,7 +19,7 @@ Consiste una aplicación desarrollada en Java que ofrece servicios para llevar a
 ## Ejecucion en AWS
 
 - Se crean las instancias para cada servicio.
-- 
+  
 ![AWSinstancias](https://github.com/juancanon1725/Parcial2/assets/98672541/3c61a4ec-4573-406f-bc8c-fe411c559dd2)
 
 - Se corre cada servicio con:
